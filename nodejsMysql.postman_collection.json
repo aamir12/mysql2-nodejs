@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "07663e39-a744-4b94-a8aa-894eb5381640",
+		"name": "nodejsMysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/products",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "get all products by using GET"
+			},
+			"response": []
+		},
+		{
+			"name": "add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\":\"Lower silk\",\r\n    \"price\":350,\r\n    \"category\":\"Mens\",\r\n    \"image\":\"lower.jpg\"\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/products",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n   \"data\": { \r\n    \"name\":\"Lower silk111\",\r\n    \"price\":350,\r\n    \"category\":\"Mens\",\r\n    \"image\":\"lower.jpg\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/products",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/products/2",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -19,8 +19,8 @@ exports.addProductMdl = async (data) => {
 exports.updateProductMdl = async (id,data) => {
     const updateAt = new Date();
     const [result] = await db.query(
-        'update products set  name=?, price=?, category=?, image=?,updateAt = ?',
-        [data.name, data.price, data.category,data.image,updateAt]
+        'update products set  name=?, price=?, category=?, image=?,updateAt = ? where id=?',
+        [data.name, data.price, data.category,data.image,updateAt,id]
       );
 
     return result;
