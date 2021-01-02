@@ -1,2 +1,2 @@
 # mysql2-nodejs
-Basic crud operation API using nodejs and mysql2.
+Basic CRUD operation API using nodejs and mysql2.
