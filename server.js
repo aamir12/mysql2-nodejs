@@ -3,6 +3,8 @@ const express = require('express');
 const dotenv = require('dotenv'); 
 const colors = require('colors');
 const morgan = require('morgan'); 
+
+
 const { notFound, errorHandler } =  require('./middleware/errorMiddleware.js'); 
 dotenv.config();
 
@@ -10,11 +12,18 @@ const productRouters = require('./routes/productRoutes');
 
 const app = express()
 
+// var whitelist = ['http://localhost:4200']
+// if (whitelist.indexOf(origin) !== -1 || !origin) {
+// }
+ 
+
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
 
 app.use(express.json())
+
+
 app.use('/api/products',productRouters);
 
 
